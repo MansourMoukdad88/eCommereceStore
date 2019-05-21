@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,11 +12,13 @@ import Defaults from './components/Defaults';
 function App() {
   return (
     <React.Fragment>
-      Hello Form App
-      <Navbar></Navbar>
-      <ProductList></ProductList>
-      <Details></Details>
-      <Defaults></Defaults>
+      <Navbar/>
+      <Switch>
+        <Route exact path="/" component={ProductList} ></Route>
+        <Route path="/details" component={Details} ></Route>
+        <Route path="/cart" component={Cart} ></Route>
+        <Route  component={Defaults} ></Route>
+      </Switch>
     </React.Fragment>
   );
 }
