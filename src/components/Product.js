@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {productConsumer, ProductConsumer} from '../context';
+import { Link } from 'react-router-dom';
+import {ButtonContainer} from './Button';
 
 export default class Product extends Component {
   render(props) {
     
     return (
-      <div>
-        <h3>Hello Form Product</h3>
-      </div>
+      <ProductConsumer>
+        {(val) => {
+          return console.log(val)
+        }}
+      </ProductConsumer>
     )
   }
 }
