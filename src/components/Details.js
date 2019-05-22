@@ -7,6 +7,7 @@ export default class Details extends Component {
   render() {
     return (
       <div>
+        <h3>Details</h3>
         {/* {(val) => {
           return console.log(val)
         }} */}

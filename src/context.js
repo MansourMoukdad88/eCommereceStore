@@ -17,6 +17,7 @@ class ProductProvider extends Component {
     console.log("Hello from add To Cart");
   } 
   render() {
+    //console.log(this.state.products)
     return (
       <ProductContext.Provider value={{
         ...this.state,
